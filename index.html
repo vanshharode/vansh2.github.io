@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+      
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <div class="tilted-image-container">
+        <img src="image4 (2).png" alt="Tilted Image">
+      </div>
+      
+      
+      
+      
+    
+</body>
+</html>
+<style>
+  body {
+    font-family: Arial black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d9d9d9;
+}
+
+
+.login-container {
+   font-family: Arial black;
+   font-size: 25px;
+    background-color:#808080;
+    padding: 50px;
+    
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #808080;
+    background-color: #cccccc;
+    border-radius: 3px;
+}
+
+button {
+  
+  font-family: Arial Black ;
+  font-size: 20px;
+  display: inline-block;
+  outline: 10px #00008b;
+      padding: 10px 20px;
+      border-radius: 50px; /* Set the border-radius property to create an oval shape */
+      background-color: #9999;
+      color: #00008b;
+      text-decoration: none;
+}
+
+button:hover {
+    background-color: #808080;
+}
+/* ... Other CSS rules ... */
+.
+
+.login-container {
+    background-color: #808080;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 8000px; /* Set the width to the desired size (e.g., 400px) */
+  margin: 0 auto; /* Center the container on the page (optional) */
+  padding: 20px; /* Add some padding to the container (optional) */
+  border: 1px solid #808080; /* Add a border (optional) */
+  width: 500px; /* Set the width to the desired size (e.g., 500px) */
+  height: 300px
+}
+
+.login-container h1 {
+    text-align: center;
+    border-bottom: 2px solid #808080; /* Add a grey (light) bottom border to the h1 element */
+}
+.center-container 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This sets the container to fill the entire viewport height */
+
+/* ... Other CSS rules ... */
+.tilted-image-container {
+  display: inline-block;
+  transform: rotate(0deg); /* Adjust the degree (15deg in this example) to change the tilt angle */
+}
+img {
+  width: 600px; /* Set the width to the desired size (e.g., 300px) */
+  height: 700px; /* Set the height to the desired size (e.g., 200px) */
+}
+
+
+
+
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("login-form");
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        
+        // Perform login validation here (for demo purposes, let's assume valid credentials).
+        if (username === "demo" && password === "password") {
+            alert("Login successful!");
+        } else {
+            alert("Invalid username or password. Please try again.");
+        }
+    });
+});
+
+ </script> 
+ 
