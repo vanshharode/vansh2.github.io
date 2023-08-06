@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+        <h1>New Credit</h1>    
+    
+    
+    <style>
+       
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Aclonica;
+        }
+
+        .hero {
+            width: 100%;
+            min-height: 100vh;
+            color: #525252;
+            background-image: url("images/home_background.png");
+            background-repeat: no-repeat;
+            background-position: right;
+            background-position-y: 25px;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background: #f2de7a;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border: 2px solid black;
+        }
+
+        .logo {
+            width: 15%;
+            min-width: 120px;
+            height: auto;
+            mix-blend-mode: multiply;
+        }
+
+        .circle {
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .user-pic {
+            /* width: 40px;
+            border-radius: 50%;
+            margin-left: 30px; */
+            cursor: pointer;
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        nav ul {
+            width: 100%;
+            text-align: right;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .sub-menu-wrap {
+            position: absolute;
+            top: 100%;
+            right: 3%;
+            width: 320px;
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height;
+        }
+
+        .sub-menu-wrap.open-menu {
+            max-height: 400px;
+            overflow: visible;
+        }
+
+        .sub-menu {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 15px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .user-info h3 {
+            font-weight: 500;
+        }
+
+        .user-info img {
+            width: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .sub-menu hr {
+            border: 0;
+            height: 2px;
+            width: 100%;
+            background: #ccc;
+            margin: 15px 0 10px;
+        }
+
+        .sub-menu-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #525252;
+            margin: 12px 0;
+        }
+
+        .sub-menu-link p {
+            width: 100%;
+        }
+
+        .sub-menu-link img {
+            width: 40px;
+            background: #e5e5e5;
+            border-radius: 50%;
+            padding: 8px;
+            margin-right: 15px;
+        }
+
+        .sub-menu-link span {
+            font-size: 20px;
+            transition: transform 0.5s;
+        }
+
+        .sub-menu-link:hover span {
+            transform: translate(5px);
+        }
+
+        .sub-menu-link p:hover {
+            font-weight: 600;
+        }
+
+        .mart-name {
+            margin: 5px;
+            color: #000000;
+            font-size: 25px;
+            font-weight: 700;
+        }
+        body{
+            background-color:#7D99F9;
+        }
+        h1{
+            position: absolute;
+            top: 120px;
+            left: 0;
+            margin-bottom: 200px;
+            margin: 10px;
+        }
+        .login-container {
+            font-family: Aclonica;
+            font-size:18px ;
+            background-color: white;
+            
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 500px;
+            margin-top: 150px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            max-width: 500px; /* Limit the width to fit smaller screens */
+            width:900px;
+            height: 350px; /* Fallback for older browsers */
+            
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #808080;
+        }
+
+        form {
+            display: flex;
+            
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            background-color:white;
+            border-radius: 3px;
+        }
+
+        button {
+            font-family:Aclonica ;
+            font-size: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 200px;
+            height: 50px;
+            border-color: #7D99F9;
+            display: flex;
+            outline: 10px #7D99F9;
+            padding: 30px 70px;
+            border-radius: 30px;
+            background-color: #7D99F9;
+            color: black;
+             text-decoration: none;
+        }
+
+        button:hover {
+            background-color:#9f9898;
+            color: #ffffff;
+        }
+        .back-button {
+            font-family: 'Bahnschrift SemiBold', Arial, sans-serif;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            margin-top: 100px;
+            margin-left: 500px;
+            padding: 10px 15px;
+            background-color: transparent;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            font-size:50px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100px; /* Set a fixed width to make the button square */
+  height: 100px; /* Set the same height as the width */
+  line-height: 100px
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+           
+            background-color: black;
+            color: white; 
+            
+        }
+    </style>
+    <!-- HTML -->
+</head>
+
+<body>
+    <div class="hero">
+        <nav>
+            <img src="plogo.png" class="logo">
+
+            <div class="mart-name">
+                Shop Name
+            </div>
+            <!-- <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+            </ul> -->
+            <div class="circle">
+                <img src="profile.png" alt="vaibhv" class="user-pic" onclick="toggleMenu()">
+            </div>
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <div class="circle">
+                            <img src="profile.png" alt="Vaibhav" class="user-pic">
+                        </div>
+                        <h3>Username</h3>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <img src="images/profile.png" alt="">
+                        <p>Edit Profile</p>
+                        <span> > </span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="images/setting.png" alt="">
+                        <p>Settings</p>
+                        <span> > </span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="images/help.png" alt="">
+                        <p>Help</p>
+                        <span> > </span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="images/logout.png" alt="">
+                        <p>Logout</p>
+                        <span> > </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="center-container">
+            <div class="login-container">
+                <div class="mb-3">
+                    <label for="disabledSelect" class="form-label"></label>
+                    <select id="disabledSelect" class="form-select">
+                      <option>--SELECT Customer--</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Items</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+    
+                    <label for="password">Total Amount</label>
+                    <input type="number"  id="Amount" required>
+    
+                    <input class="btn btn-primary" type="submit" value="ADD Credit">
+                    
+                </form>
+                
+                <a href="index.html">
+                  <button class="back-button" type="close">&times;</button>
+              </a>  
+                
+                    
+                </form>
+                
+               
+        <!-- Javascript -->
+        <script>
+            let subMenu = document.getElementById("subMenu");
+            function toggleMenu() {
+                subMenu.classList.toggle("open-menu");
+            }
+            
+        </script>
+        
+</body>
+
+</html>
